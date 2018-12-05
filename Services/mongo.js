@@ -11,7 +11,7 @@ class Database {
   static async connection() {
     try {
       const connect = await MongoClient.connect(
-        "mongodb://viniciusMartins:Vinicius15@ds243798.mlab.com:43798/cars",
+        "mongodb://<usuário>:<senha>@ds243798.mlab.com:43798/cars",
         { useNewUrlParser: true }
       );
       return connect;
