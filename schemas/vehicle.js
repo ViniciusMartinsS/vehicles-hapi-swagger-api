@@ -1,5 +1,7 @@
 'use strict'
 
+const Joi = require('joi')
+
 module.exports.SelectVehicle = {
   params: {
     id: Joi.number()
@@ -70,7 +72,7 @@ module.exports.DeleteVehicle = {
   params: {
     id: Joi.number()
       .label('id')
-      .require()
+      .required()
       .description('The id of a vehicle'),
   }
 }

@@ -7,7 +7,7 @@ const {
   DeleteVehicle
  } = require('../schemas')
 
-module.exports.default = [
+module.exports.vehicles = [
   {
     method: 'GET',
     path: '/vehicles/{id?}',
