@@ -1,7 +1,5 @@
 "use-strict";
 
-/* Imports Usados */
-
 const Hapi = require("hapi");
 const Joi = require("joi");
 const inert = require("inert");
