@@ -3,7 +3,8 @@
 const {
   selectVehicleData,
   createVehicleData,
-  updateVehicleData
+  updateVehicleData,
+  removeVehicleData
  } = require('../model/vehicles')
 
 module.exports.show = async request =>
@@ -15,6 +16,5 @@ module.exports.create = async request =>
 module.exports.update = async request =>
   updateVehicleData(request)
 
-module.exports.remove = async request => {
-  return 'oi'
-}
+module.exports.remove = async request =>
+  removeVehicleData(request)

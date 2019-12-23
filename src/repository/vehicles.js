@@ -17,6 +17,11 @@ module.exports.update = async (where, payload) => {
   return collection.update({ ...where }, { ...payload })
 }
 
+module.exports.remove = async where => {
+  const collection = await defineCollection()
+  return collection.deleteOne({ ...where })
+}
+
 async function defineCollection () {
   const database = await connection()
   return database.collection('cars')

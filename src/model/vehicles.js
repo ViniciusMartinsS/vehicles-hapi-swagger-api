@@ -2,7 +2,7 @@
 
 const { ObjectID } = require('mongodb')
 
-const { find, create, update } = require('../repository/vehicles')
+const { find, create, update, remove } = require('../repository/vehicles')
 
 module.exports.selectVehicleData = async request => {
   const _id = request && request.params && request.params.id
@@ -41,4 +41,14 @@ module.exports.updateVehicleData = async request => {
   }
 
   return update(where, payload)
+}
+
+module.exports.removeVehicleData = async request => {
+  const _id = request && request.params && request.params.id
+
+  const where = {
+    ...(_id && { _id: new ObjectID(_id) })
+  }
+
+  return remove(where)
 }
