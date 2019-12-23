@@ -11,10 +11,10 @@ module.exports.connection = async () => {
       return DATABASE
     }
 
-    DATABASE = await MongoClient.connect(
+    connection = await MongoClient.connect(
       DATABASE_URL, { useNewUrlParser: true }
     )
-    .db('cars')
+    DATABASE = connection.db('cars')
 
     return DATABASE
   } catch (err) {
