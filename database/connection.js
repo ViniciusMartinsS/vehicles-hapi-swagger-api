@@ -1,7 +1,7 @@
 'use  strict';
 
 const { MongoClient } = require('mongodb');
-const DATABASE_URL = 'mongodb://ViniciusMartinsS:Vinicius15@ds257698.mlab.com:57698/cars'
+const DATABASE_URL = 'YOUR MLAB URL HERE!!'
 
 let DATABASE = null;
 
