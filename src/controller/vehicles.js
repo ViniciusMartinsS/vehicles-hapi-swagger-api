@@ -1,13 +1,15 @@
 'use strict'
 
-const { selectVehicleDate } = require('../model/vehicles')
+const {
+  selectVehicleData,
+  createVehicleData
+ } = require('../model/vehicles')
 
 module.exports.show = async request =>
-  selectVehicleDate(request)
+  selectVehicleData(request)
 
-module.exports.create = async request => {
-  return 'oi'
-}
+module.exports.create = async request =>
+  createVehicleData(request)
 
 module.exports.update = async request => {
   return 'oi'

@@ -4,7 +4,7 @@ const Joi = require('joi')
 
 module.exports.SelectVehicle = {
   params: {
-    id: Joi.number()
+    id: Joi.string()
       .label('id')
       .optional()
       .description('The id of a vehicle'),
@@ -38,7 +38,7 @@ module.exports.CreateVehicle = {
 
 module.exports.UpdateVehicle = {
   params: {
-    id: Joi.number()
+    id: Joi.string()
       .label('id')
       .required()
       .description('The id of a vehicle'),
@@ -70,7 +70,7 @@ module.exports.UpdateVehicle = {
 
 module.exports.DeleteVehicle = {
   params: {
-    id: Joi.number()
+    id: Joi.string()
       .label('id')
       .required()
       .description('The id of a vehicle'),

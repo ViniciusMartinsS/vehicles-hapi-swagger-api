@@ -2,9 +2,9 @@
 
 const { ObjectID } = require('mongodb')
 
-const { find } = require('../repository/vehicles')
+const { find, create } = require('../repository/vehicles')
 
-module.exports.selectVehicleDate = async request => {
+module.exports.selectVehicleData = async request => {
   const _id = request && request.params && request.params.id
 
   const where = {
@@ -12,4 +12,12 @@ module.exports.selectVehicleDate = async request => {
   }
 
   return find(where)
+}
+
+module.exports.createVehicleData = async request => {
+  const payload = {
+    ...(request && { ...request.payload })
+  }
+
+  return create(payload)
 }
