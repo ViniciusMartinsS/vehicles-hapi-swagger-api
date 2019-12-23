@@ -2,9 +2,9 @@
   "name": "api-swagger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "srv/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node srv/"
   },
   "author": "",
   "license": "ISC",
